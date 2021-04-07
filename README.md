@@ -5,7 +5,7 @@ so execute *pip install keyboard* or *pip install -r requirements.txt*
 
 **How to play:**
 1) run *python GAME.py*
-2) suffer XD
+2) suffer XD \n
 2b) use **WASD** to control direction
 3) eat food to grow and icrease your score
 4) try not to bump in yourself or wall or it will be fiasco
