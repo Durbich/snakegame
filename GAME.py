@@ -20,7 +20,7 @@ config = ConfigParser()
 config.read('game_data.cfg')
 highscore = int(config['player']['highscore'])
 x, y = int(config['field']['x']), int(config['field']['y'])
-bounds_around = True if config['field']['bounds_aroud'] == 'yes' else False
+bounds_around = True if config['field']['bounds_around'] == 'yes' else False
 
 room_size = (x, y)
 room = field.Field(room_size, bounds_around)
