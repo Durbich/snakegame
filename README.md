@@ -8,7 +8,7 @@ so execute *pip install keyboard* or *pip install -r requirements.txt*
 2. suffer XD<br/>
 2b. use **WASD** to control direction
 3. eat food to grow and icrease your score
-4. try not to bump in yourself or wall or it will be fiasco
+4. try not to bump in yourself or wall. It will be fiasco
 5. die in stupid way (in game, not IRL)
 
 **To change map open *game_data.cfg* and set your height and width**
