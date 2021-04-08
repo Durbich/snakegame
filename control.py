@@ -1,7 +1,3 @@
-# Copyright (c) Durbich
-# Licensed under the MIT License. See LICENSE file for license information.
-
-
 from keyboard import read_key
 import time
 
