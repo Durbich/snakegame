@@ -1,7 +1,3 @@
-# Copyright (c) Durbich
-# Licensed under the MIT License. See LICENSE file for license information.
-
-
 def check_and_fix(max_x_y, new):
     max_x, max_y = max_x_y
     if new[0] == max_x:
