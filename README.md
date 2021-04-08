@@ -17,7 +17,7 @@ also you can add walls around by set *yes* in *bounds_aroud*
 *if you find a bug, please send me to dev/null. I don't want to*
 *maintain this project. I made it just for fun*
 
-
+<br/>
 Copyright (c) Durbich.<br/>
 Licensed under the MIT License.<br/>
 See LICENSE file for license information.
