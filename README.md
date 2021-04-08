@@ -14,8 +14,9 @@ so execute *pip install keyboard* or *pip install -r requirements.txt*
 **To change map open *game_data.cfg* and set your height and width**
 also you can add walls around by set *yes* in *bounds_aroud*
 
-*if you find a bug, please send me to dev/null, I don't want to*
+*if you find a bug, please send me to dev/null. I don't want to*
 *maintain this project. I made it just for fun*
+
 
 Copyright (c) Durbich.<br/>
 Licensed under the MIT License.<br/>
