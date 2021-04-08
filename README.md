@@ -1,5 +1,5 @@
 ## Classic snake game
-![Alt Text](https://psv4.userapi.com/c520036/u203688551/docs/d16/6ddc9cfb32bb/ezgif_com-gif-maker.gif)
+![](https://psv4.userapi.com/c520036/u203688551/docs/d16/6ddc9cfb32bb/ezgif_com-gif-maker.gif)
 
 this game requieres python3 and keyboard module
 so execute *pip install keyboard* or *pip install -r requirements.txt*
