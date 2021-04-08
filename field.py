@@ -15,12 +15,13 @@ class Field:
         self.emptycell = '  '
         self.is_have_emptycell = True
         self.foodcell = '+1'
+        self.foodcell_x_y = None  # if have - will be tuple
         self.super_food_cell = '+0'
         self.super_food_score = 0
+        self.super_food_x_y = None  # if have - will be tuple
         self.super_food_start_score = self.xsize//2 + self.ysize//2
         if self.super_food_start_score > 99:
             self.super_food_start_score = 99
-        self.super_food_x_y = None  # if have - will be tuple
         self.cells = [            # MATTER: cells[Y][X]
             [self.emptycell for i in range(self.xsize)]
             for i in range(self.ysize)
@@ -51,12 +52,13 @@ class Field:
         self.cells[head[1]][head[0]] = self.snakecell
         if head_position == self.emptycell:
             return 'empty'
-        if head_position == self.boundcell:
+        elif head_position == self.boundcell:
             return 'bound'
-        if head_position == self.foodcell:
+        elif head == self.foodcell_x_y:
+            self.foodcell_x_y = None
             return 'food'
-        if head_position == self.super_food_cell:
-            self.kill_super_food()
+        elif head == self.super_food_x_y:
+            self.super_food_x_y = None
             return 'super food'
 
     def spawn_food(self, super_food=False):
@@ -71,6 +73,7 @@ class Field:
             y += 1
         if availablecells:
             foodcell = rand_choice(availablecells)
+            self.foodcell_x_y = foodcell
             self.cells[foodcell[1]][foodcell[0]] = self.foodcell
             if super_food:
                 availablecells.remove(foodcell)
@@ -84,7 +87,7 @@ class Field:
         if self.super_food_x_y:
             if self.super_food_score == 0:
                 _x, _y = self.super_food_x_y
-                self.kill_super_food()
+                self.super_food_x_y = None
                 self.cells[_y][_x] = self.emptycell
             else:
                 _x, _y = self.super_food_x_y
@@ -94,9 +97,6 @@ class Field:
                 else:
                     self.super_food_cell = f'+{self.super_food_score}'
                 self.cells[_y][_x] = self.super_food_cell
-
-    def kill_super_food(self):
-        self.super_food_x_y = None
 
     def clear_cell(self, cell):
         self.cells[cell[1]][cell[0]] = self.emptycell
